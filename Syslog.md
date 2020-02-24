@@ -52,6 +52,28 @@
   - Lưu tất cả log ngoài mức INFO `mail.!info           /var/log/mail`
   
 # 3. Rotating log
-- Để ngăn cản những files này ngày càng trở nên nặng và khó kiểm soát, ta nên sử dụng rotate log. Hệ thống đưa ra các lệnh để thiết lập những log files mới, những file log cũ được đổi tên bằng cách thay đổi s
+- Để ngăn cản những files này ngày càng trở nên nặng và khó kiểm soát, ta nên sử dụng rotate log. Hệ thống đưa ra các lệnh để thiết lập những log files mới, những file log cũ sẽ thêm một số ở cuối tên file
+- File cấu hình `/etc/logrotate.d`
+   <img src="https://i.imgur.com/nFsjUjS.png">
+   
+   - Hệ thống sẽ quay vòng log files hàng tuần
+   - Lưu lại những thông tin logs trong 4 tuần
+   
+# 4. Syslog server
+- Để chuyển một máy thành máy chủ log thì đâu tiền bạn phải mở cổng 514
+  - `iptables -A INPUT -p udp --dport 514 -j ACCEPT`
+  - `iptables -A OUTPUT -p udp --sport 514 -j ACCEPT`
+  
+- Sửa file cấu hình `/etc/rsyslog.conf`
+
+   <img src="https://i.imgur.com/478zHOH.png">
+   
+- Với client thì sửa file cấu hình log như sau:
+   `mail.*      @IP của syslogserver`
+   
+  
+  
+
+ 
 
 
