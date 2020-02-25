@@ -42,3 +42,5 @@ Người dùng cũng có một hoặc nhiều ID nhóm (gid), bao gồm một ID
   - VD2: sử dụng lệnh `chage -E year-month-day user` để thay đổi ngày mật khẩu hết hạn.
   - VD3: sử dụng lệnh `chage -W 3 user` để đưa ra cảnh báo trước khi mật khẩu hết hạn.
   - VD4: sử dụng lệnh `chage -M 5 user` để chỉ định số ngày tối đa và tối thiểu giữa các lần thay đổi mật khẩu
+  
+  
