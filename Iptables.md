@@ -30,11 +30,33 @@
 -  Nó được dùng bởi SELinux để thiết lập các chính sách bảo mật.
 
 # 3. Các quy tắc áp dụng Iptables
-- Liệt kê toàn bộ quy tắc `#iptables -L`
+- Liệt kê toàn bộ quy tắc `#iptables -nvL`
+
+    <img src="https://i.imgur.com/VGjMXHv.png">
+    
+- Target: hành động áp dụng cho mỗi quy tắc
+  - ACCEPT: gói dữ liệu được chuyển tiếp
+  - DROP: gói dữ liệu bị chặn
+  - REJECT: gói dữ liệu bị chặn, đồng thời gửi thông báo tới người gửi
+- Prot: quy định các giao thức sẽ được áp dụng để thực thi quy tắc, bao gồm all, TCP hay UDP
+- IN: chỉ ra rule sẽ áp dụng cho các gói tin đi vào từ interface nào, chẳng hạn như lo, eth0, eth1 hoặc any là áp dụng cho tất cả interface.
+- OUT: chỉ ra rule sẽ áp dụng cho các gói tin đi ra từ interface nào.
+- DESTINATION: Địa chỉ của lượt truy cập được phép áp dụng quy tắc.
+
+# 4. Sử dụng iptables để chặn/mở port hoặc IP
+- Mở port: `#iptables -A INPUT -p tcp/udp --dport xxx -j ACCEPT`
+- Chặn port: `#iptables -A INPUT -p tcp/udp --dport xxx -j DROP`
+- Chặn IP đến : `iptables -A INPUT -p tcp -s xxx.xxx.xxx.xxx -j DROP`
+- Chặn đi tới IP: `iptables -A OUTPUT -p tcp -d xxx.xxx.xxx.xxx -j DROP`  
+- Cho phép 1 IP cụ thể đi qua port : `iptables -A INPUT -p tcp -s xxx.xxx.xxx.xxx --dport xx -j ACCEPT`
+- Chặn IP cụ thể đi qua port: `iptables -A INPUT -p tcp -s xxx.xxx.xxx.xxx --dport xx -j DROP`
 
 
-
-
-
-
+# 5. Lưu cấu hình Iptables
+- Sau khi cấu hình xong Iptables, ta cần lưu lại
+  - Thực hiện những quy tắc trong trường hợp khởi động lại `#iptables-save >/etc/sysconfig/iptables`
+  - export file `iptables-save > tenfile`
+  - import file `iptables-save < tenfile`
+  - Lưu file `service iptables save`
+  
   
