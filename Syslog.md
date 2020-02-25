@@ -12,7 +12,7 @@
   
    <img src="https://i.imgur.com/h4se6v4.png">
 
-- File cấu hình cho ta thấy nơi lưu log của các service trong hệ thống, bên trái là nguồn tạo log - bên phải là nơi lưu log
+- File cấu hình cho thấy nơi lưu log của các service trong hệ thống, bên trái là nguồn tạo log - bên phải là nơi lưu log
    
    <img src="https://i.imgur.com/5chBLWw.png">
    
@@ -60,7 +60,7 @@
    - Lưu lại những thông tin logs trong 4 tuần
    
 # 4. Syslog server
-- Để chuyển một máy thành máy chủ log thì đâu tiền bạn phải mở cổng 514
+- Để chuyển một máy thành máy chủ log thì phải mở cổng 514
   - `iptables -A INPUT -p udp --dport 514 -j ACCEPT`
   - `iptables -A OUTPUT -p udp --sport 514 -j ACCEPT`
   
