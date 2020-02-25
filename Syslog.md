@@ -69,7 +69,7 @@
    <img src="https://i.imgur.com/478zHOH.png">
    
 - Với client thì sửa file cấu hình log như sau:
-   `mail.*      @IP của syslogserver`
+   `mail.*        @IP của syslogserver`
    
   
   
