@@ -1,6 +1,6 @@
 # 1. Giới thiệu system logging
 - Syslog là một giao thức dùng để xử lý các file log Linux. Các file log có thể được lưu tại máy đó hoặc trên Syslog server.
-- Dùng lệnh `tail -f` để đọc log l
+- Dùng lệnh `tail -f` để đọc log liên tục
 - Đặc điểm:
   - Syslog dùng port 514
   - Dữ liệu được gửi dưới dạng text không mã hóa.
