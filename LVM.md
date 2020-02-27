@@ -75,7 +75,11 @@
   - Mount để sử dụng
     - `mount /dev/lvmtest/demo /mnt/test`
     - Sửa file `/etc/fstab` để mount cố định khi reboot
-
+## 3.3 Xóa PV, VG, LV
+- Để xóa LV ta cần `umount`: `umount /mnt/test`
+- Xóa LV: `lvremove /dev/testlvm/demo`
+- Xóa VG: `vgremove /dev/testlvm`
+- Xóa PV: `pvremove /dev/sdb`
    
   
     
