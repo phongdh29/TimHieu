@@ -14,14 +14,16 @@
 
 ## 1. Cấu hình IP trên server và cấu hình cho phép forward gói tin
 - Để cấu hình IP tĩnh, ta sửa file cấu hình `/etc/netplan/50-cloud-init.yaml`
-  <img src="https://i.imgur.com/6bdBmOr.png">
+
+    <img src="https://i.imgur.com/6bdBmOr.png">
   
 - Sửa file cấu hình như trên, xong ta sử dụng lệnh `netplan apply` để restart lại network
 
 ## 2. Cấu hình IP và route trên Ubuntu Server 1:
 - Mở file `/etc/netplan/50-cloud-init.yaml`
 
-  <img src="https://i.imgur.com/KXsCw6X.png"
+
+    <img src="https://i.imgur.com/KXsCw6X.png"
 
 - Thực hiện file cấu hình như trên để chỉnh ip tĩnh và ip route
 - Sử dụng `netplan apply` để restart lại network
