@@ -23,7 +23,7 @@
 - Mở file `/etc/netplan/50-cloud-init.yaml`
 
 
-    <img src="https://i.imgur.com/KXsCw6X.png"
+    <img src="https://i.imgur.com/KXsCw6X.png">
 
 - Thực hiện file cấu hình như trên để chỉnh ip tĩnh và ip route
 - Sử dụng `netplan apply` để restart lại network
@@ -31,7 +31,7 @@
 ## 3. Cấu hình IP và route trên Ubuntu server 2:
 - Mở file `/etc/netplan/50-cloud-init.yaml`
 
-  <img src="https://i.imgur.com/Hd1DgQN.png"
+  <img src="https://i.imgur.com/Hd1DgQN.png">
 
 - Thực hiện file cấu hình như trên để chỉnh ip tĩnh và ip route
 - Sử dụng `netplan apply` để restart lại network
