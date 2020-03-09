@@ -12,8 +12,6 @@ useradd -m -s /bin/bash $USR;
 
 passwd $USR;
 
-echo "Tao xong user $USR";
-
 echo "$USR ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 
