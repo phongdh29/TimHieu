@@ -18,7 +18,7 @@
         
         check_pass=$(getent shadow | grep "$USR" |cut -d":" -f"2") #Check pass trong file shadow
         
-                if [ $check_pass != "!" ]; then
+                if [ $check_pass != "!" ]; then #Neu truong vua cat khac "!" => nhap 2 lan pass
 
                         cp /etc/sudoers /tmp/sudoers
                         
@@ -42,7 +42,7 @@
                         
                 fi
                 
-else
+        else
 
 
 
