@@ -1,15 +1,16 @@
 # 1. Yêu cầu: Viết một bash script để add user vào ubuntu, các tham số là username, password. Cho phép sudo không cần password.
 # 2. Bash Script
 - tạo file `vi create_user_sudo.sh`, nhập nội dung sau:
-#!/bin/bash
 
-echo "Nhap username: "
+        #!/bin/bash
 
-read USR
+        echo "Nhap username: "
 
-getent passwd $USR > /dev/null
+        read USR
 
-if [ $? -ne 0 ]; then #Kiem tra user, echo $? la trang thai cua lenh cuoi cung, khac 0 la error => khac 0 la chua co user
+        getent passwd $USR > /dev/null
+
+        if [ $? -ne 0 ]; then #Kiem tra user, echo $? la trang thai cua lenh cuoi cung, khac 0 la error => khac 0 la chua co user
 
         useradd -m -s /bin/bash $USR
         
