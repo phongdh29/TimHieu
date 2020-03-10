@@ -43,6 +43,8 @@
                 fi
                 
         else
+                echo "User da ton tai"
+        fi
 
 
 
