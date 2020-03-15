@@ -23,6 +23,9 @@
 
   <img src="https://i.imgur.com/B7Lxuto.png">
   
-- Lấy mã trên điện thoại và nhập vào
+- Mở app Google Authenticator trên điện thoại và nhập vào
+
+
+
 
 
