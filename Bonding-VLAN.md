@@ -37,8 +37,21 @@
   <img src="https://i.imgur.com/nggBFrA.png">
   
   
+# 3.VLAN
+  - Vlan là viết tắt của Virtual Local Area Network, hay còn gọi là mạng LAN ảo.
   
 
+## 3.1 Tạo vlan
+- Kiểm tra kernel module liên quan đến VLAN ` lsmod | grep 8021`
+- Nếu chưa được bật, thì bật bằng lệnh: `modprobe 8021q`
+- Ta sẽ tạo 2 VLAN có ID là 10 và 20 trên card bond0 vừa tạo ở trên
+- Mở và sửa file `sudo vi /etc/netplan/50-cloud-init.yaml` 
+
+    <img src="https://i.imgur.com/5S83kSZ.png">
+  
+- Kiểm tra `ip a` hoặc `ifconfig -a`
+  
+    <img src="https://i.imgur.com/ZkT1bbg.png">
   
   
 
