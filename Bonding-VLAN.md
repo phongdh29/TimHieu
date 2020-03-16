@@ -14,8 +14,9 @@
 - Kiểm tra bonding trong kernel module `lsmod | grep bonding`
 - Nếu chưa có thì gõ lệnh sau: 
 
-`echo 'bonding' >> /etc/modules`
-`modprobe bonding`
+  `echo 'bonding' >> /etc/modules`
+
+  `modprobe bonding`
 
 - Sau đó cài gói ifenslave ` apt-get install ifenslave`
 - Kiểm tra card mạng nào có thể dùng `ifconfig -a`, ở đây ta sẽ dùng `ens38` và `ens39`
