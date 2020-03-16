@@ -48,11 +48,14 @@
 
     <img src="https://i.imgur.com/5S83kSZ.png">
   
-- L
+- Lưu lại cấu hình netplan: `netplan apply`
 - Kiểm tra `ip a` hoặc `ifconfig -a`
   
     <img src="https://i.imgur.com/ZkT1bbg.png">
   
   
+
+
+
 
 
