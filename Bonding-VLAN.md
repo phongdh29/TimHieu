@@ -48,6 +48,7 @@
 
     <img src="https://i.imgur.com/5S83kSZ.png">
   
+- L
 - Kiểm tra `ip a` hoặc `ifconfig -a`
   
     <img src="https://i.imgur.com/ZkT1bbg.png">
