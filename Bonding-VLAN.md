@@ -39,10 +39,8 @@
   
   
 # 3.VLAN
-  - Vlan là viết tắt của Virtual Local Area Network, hay còn gọi là mạng LAN ảo.
-  
-
-## 3.1 Tạo vlan
+- Vlan là viết tắt của Virtual Local Area Network, hay còn gọi là mạng LAN ảo.
+- Cài đặt `apt-get install vlan`
 - Kiểm tra kernel module liên quan đến VLAN ` lsmod | grep 8021`
 - Nếu chưa được bật, thì bật bằng lệnh: `modprobe 8021q`
 - Ta sẽ tạo 2 VLAN có ID là 10 và 20 trên card bond0 vừa tạo ở trên
