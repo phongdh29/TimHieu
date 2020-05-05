@@ -32,6 +32,8 @@
   
   - Network Traffic
   
+- Để tăng mức Load Average ta có thể sử dụng nhiều chương trình để tăng lượng sử dụng CPU, thực hiện traffic lớn...
+  
 
 
 
