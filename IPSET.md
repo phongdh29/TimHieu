@@ -16,11 +16,10 @@ B2: Sử dụng IPTABLES và IPSET
 - IPSET là công cụ hữu ích quản lý địa chỉ ip. IP sets có thể lưu trữ IP address, networks, (tcp/udp) port numbers, MAC address, interface name hoặc kết hợp những cái trên.
 - `apt-get install ipset`
 - Tạo set để lưu trữ network: `ipset create allow_ip hash:net`
-- Thêm IP từ file IPv4 vào set allow_ip, tạo 1 file script add_ip.sh
+- Thêm IP từ file IPv4 vào set allow_ip:
+    
+    `while read line; do ipset add allow_ip $line; done < IPv4_VN`
 
-	<img src="https://i.imgur.com/OcFc30K.png">
-- Sử dụng lệnh `chmod u+x add_ip.sh` để có thể chạy script
-- Chạy script `sh add_ip.sh`
 - Kiểm tra IP trong set allow_ip: `ipset list allow_ip`
 - Chặn mọi kết nối từ bên ngoài, ngoại trừ IP VN có trong set allow_ip: 
 
