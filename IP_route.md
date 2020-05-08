@@ -21,6 +21,7 @@
 
 - Để mở tíh năng IP forwarding, ta sửa thông tin cấu hình trong file `/etc/sysctl.conf`
   - Tìm và sửa `net.ipv4.ip_forward=1`
+  
     <img src="https://i.imgur.com/pgsa6wB.png">
 
 ## 2. Cấu hình IP và route trên Ubuntu Server 1:
