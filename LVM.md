@@ -41,11 +41,18 @@
   
 # 3. Thay đổi dung lượng
 ## 3.1 Mở rộng Volume Group và thay đổi kích thước các Logical Volume
-- Sử dụng lệnh sau để thêm `/dev/sdc` vào Volume Group testlvm:
+- Chia phân vùng và tạo PV:
+  ```
+  fdisk /dev/sdc
+  n -> p -> ... -> w
+  pvcreate /dev/sdc1
+  ```
+- Sử dụng lệnh sau để thêm `/dev/sdc1` vào Volume Group testlvm:
   - `vgextend testlvm /dev/sdc`
 - Sử dụng lệnh `vgs` để kiểm tra dung lượng sau khi thêm.
 - Để tăng kích thước Logical Volume:
   - `lvextend -L +10G /dev/testlvm/demo`
+  - `lvextend -l +100%FREE /dev/testlvm/demo`
 - Chạy lại lệnh `lvs` để kiểm tra dung lượng LV
     <img src="https://i.imgur.com/oBlEU2O.png">
     
