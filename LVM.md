@@ -48,12 +48,13 @@
   pvcreate /dev/sdc1
   ```
 - Sử dụng lệnh sau để thêm `/dev/sdc1` vào Volume Group testlvm:
-  - `vgextend testlvm /dev/sdc`
+  - `vgextend testlvm /dev/sdc1`
 - Sử dụng lệnh `vgs` để kiểm tra dung lượng sau khi thêm.
 - Để tăng kích thước Logical Volume:
   - `lvextend -L +10G /dev/testlvm/demo`
   - `lvextend -l +100%FREE /dev/testlvm/demo`
 - Chạy lại lệnh `lvs` để kiểm tra dung lượng LV
+  
     <img src="https://i.imgur.com/oBlEU2O.png">
     
 - Sau khi tăng kích thước, ta dùng lệnh sau để resize:
